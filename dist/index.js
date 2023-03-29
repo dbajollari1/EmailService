@@ -12,21 +12,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
 const dotenv_1 = __importDefault(require("dotenv"));
 const Server_1 = require("./Server");
-const routes_1 = require("./routes");
+const index_1 = require("./routes/index");
 //import { createDatabase } from "./Database";
 //import { Connection } from "typeorm";
-const index_1 = __importDefault(require("./logger/index"));
+const index_2 = __importDefault(require("./logger/index"));
 //import "./types";
 dotenv_1.default.config();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         console.log(process.env.SERVER_PORT);
         //const connection: Connection = await createDatabase();
-        const routes = (0, routes_1.createRoutes)();
+        const routes = (0, index_1.createRoutes)();
         const server = (0, Server_1.createServer)(routes);
-        server.listen(parseInt(process.env.SERVER_PORT) || 3001, () => index_1.default.info(`Server running at port ${process.env.SERVER_PORT}`));
+        server.listen(parseInt(process.env.SERVER_PORT) || 3001, () => index_2.default.info(`Server running at port ${process.env.SERVER_PORT}`));
     });
 }
 main();
