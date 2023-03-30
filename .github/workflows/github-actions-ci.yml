@@ -1,4 +1,4 @@
-name: Node js app deploy to EKS
+name: NodeJS email service app deploy
 on:
   push:
     branches: [ "master" ]
