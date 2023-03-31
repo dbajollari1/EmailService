@@ -1,4 +1,4 @@
-name: NodeJS email service app deploy
+name: NodeJS emailservice app deploy
 on:
   push:
     branches: [ "master" ]
