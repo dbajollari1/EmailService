@@ -10,7 +10,7 @@ export function createRoutes () {
 
     const pubService: PublicService = new PublicService();
     const pubController: PublicController = new PublicController(pubService);
-
+    router.use('/', (req, res, next) => { res.json("success") });
     router.use('/public', createPublicRouter(pubController));
     router.get('/test', (req, res, next) => { res.json("success") });
     return router;
