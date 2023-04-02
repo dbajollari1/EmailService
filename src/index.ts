@@ -18,8 +18,8 @@ async function main() {
     );
 
     server.listen(
-        parseInt(process.env.SERVER_PORT!) || 3001,
-        () => app_logger.info(`Server running at port ${process.env.SERVER_PORT}`)
+        parseInt("8080"),
+        () => app_logger.info("Server running at port 8080")
     );
 
 }

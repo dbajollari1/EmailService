@@ -16,7 +16,8 @@ export function createServer(routes: express.Router) {
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
 
-
+    app.set('etag', false); 
+    
     app.use(function (request, response, next) {
 
         response.header('Access-Control-Allow-Origin', '*');
