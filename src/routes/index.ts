@@ -11,7 +11,7 @@ export function createRoutes () {
     const pubService: PublicService = new PublicService();
     const pubController: PublicController = new PublicController(pubService);
     router.use('/public', createPublicRouter(pubController));
-    router.get('/test', (req, res, next) => { res.status(200).json("success") });
+    router.get('/test', (req, res, next) => { res.status(200).json(process.env.MJ_APIKEY_PUBLIC) });
     router.use('/', (req, res, next) => { res.status(200).json("success1") });
     return router;
 };

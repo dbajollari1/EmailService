@@ -7,8 +7,8 @@ require('dotenv').config();
 //     process.env.MJ_APIKEY_PRIVATE || ''
 // );
 const mailjet = Mailjet.apiConnect(
-         process.env.MJ_APIKEY_PUBLIC || '077fc21857d31f1f416fbf1ab7477164',
-         process.env.MJ_APIKEY_PRIVATE || '03caddedf8edb44156d03585242e359a'
+         process.env.MJ_APIKEY_PUBLIC,
+         process.env.MJ_APIKEY_PRIVATE
 );
 
 export default class PublicService {
