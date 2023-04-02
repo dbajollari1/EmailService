@@ -41,6 +41,7 @@ function createServer(routes) {
     app.use((0, helmet_1.default)());
     app.use(express_1.default.urlencoded({ extended: false }));
     app.use(express_1.default.json());
+    app.set('etag', false);
     app.use(function (request, response, next) {
         response.header('Access-Control-Allow-Origin', '*');
         response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
