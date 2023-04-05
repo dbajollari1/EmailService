@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../src/index.ts");
+const app = require("../index");
 
 describe("GET /test route testting", () => {
   test("should return success", async () => {
