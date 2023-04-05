@@ -4,7 +4,7 @@
   "description": "This repo contains a NodeJS project that connects to the Mailjet API and sends emails. It is used to send emails for my contact page on my [personal website](https://dbajollari1.github.io) but can be used to send emails for any purpose. In this README I also label the steps to build the project into a Docker image that can be pushed to Azure(as that's where I am hosting it) but feel free to disregard those steps if unnecessary for your purposes. All the code is in this GitHub repository, feel free to clone it and use it as a template for yourself! Before attempting to run the project make sure you have the latest version of [node](https://nodejs.org/en/) installed on your pc.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --forceExit",
     "dev": "nodemon",
     "build": "tsc",
     "debug": "nodemon --debug index.js"
@@ -35,9 +35,13 @@
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
+    "@types/jest": "^29.5.0",
     "@types/node": "^18.7.14",
     "@types/winston": "^2.4.4",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.19",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
     "typescript": "^4.8.2"
   }
 }

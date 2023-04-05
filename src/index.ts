@@ -21,7 +21,7 @@ async function main() {
         parseInt("8080"),
         () => app_logger.info("Server running at port 8080")
     );
-
+    module.exports = server; 
 }
 
 main();
