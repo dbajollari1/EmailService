@@ -28,6 +28,7 @@ function main() {
         const routes = (0, index_1.createRoutes)();
         const server = (0, Server_1.createServer)(routes);
         server.listen(parseInt("8080"), () => index_2.default.info("Server running at port 8080"));
+        module.exports = server;
     });
 }
 main();
