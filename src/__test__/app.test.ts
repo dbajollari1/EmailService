@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../index");
 
-describe("GET /test route testting", () => {
+describe("GET /test route testing", () => {
   test("should return success", async () => {
     const res = await request(app).get('/test');
     expect(res.statusCode).toBe(200);
